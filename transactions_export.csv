@@ -1,0 +1,250 @@
+tanggal,type,category,description,amount
+2026-11-17,expense,Makanan,jajan rumah sakit,30900
+2026-11-17,expense,Makanan,Makan Siang,24000
+2026-11-17,expense,Lainnya,perbaikan listrik,150000
+2026-11-17,expense,Makanan,Makan Siang,14000
+2026-11-17,expense,Makanan,Sarapan,20000
+2026-11-17,expense,Makanan,Sarapan,12000
+2026-11-17,expense,Lainnya,pakan entog,87500
+2026-11-16,expense,Lainnya,perbaikan listrik,50000
+2026-11-16,expense,Makanan,Jajan suami,100000
+2026-11-16,expense,Belanja,Pasar Senin,136000
+2026-11-16,expense,Tagihan,Pulsa telpon pln,7500
+2026-11-16,expense,Peliharaan,Pakan Entog,150000
+2026-11-16,expense,Makanan,Makan Siang,16000
+2026-11-16,expense,Tagihan,Kuota,10000
+2026-11-16,expense,Tagihan,Wifi,259740
+2026-11-15,expense,Makanan,Galon,22000
+2026-11-15,expense,Makanan,Marugame,107000
+2026-11-15,expense,Makanan,Sarapan,25000
+2026-11-15,expense,Makanan,Makan Siang,16000
+2026-11-14,expense,Keinginan,Ayce,310000
+2026-11-13,expense,Keluarga,Keluarga,500000
+2026-11-13,expense,Keinginan,Karawang,520000
+2026-11-13,expense,Makanan,Baso MP,55000
+2026-11-13,expense,Tagihan,Kuota,38000
+2026-11-12,expense,Keinginan,Watson 6 des,350500
+2026-11-12,expense,Makanan,jajan rumah sakit,26000
+2026-11-12,expense,Belanja,Beras,96000
+2026-11-12,expense,Belanja,Beras,96000
+2026-11-12,expense,Makanan,Sate,61500
+2026-11-12,expense,Makanan,Makan Siang,16000
+2026-11-12,expense,Transport,bensin suami,12000
+2026-11-12,expense,Makanan,Sarapan,10000
+2026-11-12,expense,Transport,bensin suami,76720
+2026-11-12,expense,Keluarga,Keluarga,650000
+2026-11-11,expense,Makanan,batagor,16000
+2026-11-11,expense,Makanan,Sarapan,12000
+2026-11-11,expense,Lainnya,Kabel charger,27399
+2026-11-11,expense,Peliharaan,Pakan Entog,50241
+2026-11-11,expense,Lainnya,Kipas mini,73234
+2026-11-11,expense,Peliharaan,Tempat minum entog,53466
+2026-11-10,expense,Peliharaan,Pakan Entog,65000
+2026-11-10,expense,Makanan,Susu jahe,30000
+2026-11-10,expense,Makanan,Sarapan,12000
+2026-11-10,expense,Belanja,Plered,28000
+2026-11-10,expense,Peliharaan,Pakan Entog,37500
+2026-11-10,expense,Makanan,Makan Siang,24000
+2026-11-10,expense,Makanan,Jus,12000
+2026-11-09,expense,Makanan,Sarapan,12000
+2026-11-09,expense,Belanja,Pasar Senin,256000
+2026-11-09,expense,Makanan,Jus,12000
+2026-11-09,expense,Makanan,Makan Siang,18000
+2026-11-08,expense,Makanan,Ayam,32000
+2026-11-08,expense,Makanan,Batagor mie kocok,39000
+2026-11-08,expense,Makanan,Sarapan,25000
+2026-11-08,income,Peliharaan,Entog - Facebook,125000
+2026-11-07,expense,Makanan,Jajan suami,50000
+2026-11-07,expense,Makanan,Point coffee,77900
+2026-11-07,expense,Kesehatan,berobat suami,30107
+2026-11-07,expense,Makanan,Sarapan,11000
+2026-11-07,expense,Transport,bensin suami,30000
+2026-11-06,income,Peliharaan,Entog - El,125000
+2026-11-06,income,Lainnya,Lomba trading,1900672
+2026-11-06,expense,Makanan,Lazatto,49000
+2026-11-06,expense,Makanan,Jus,12000
+2026-11-06,expense,Hiburan,Game Ricis,60000
+2026-11-06,expense,Makanan,Makan Siang,15000
+2026-11-06,expense,Makanan,Sarapan,20000
+2026-11-05,expense,Makanan,Galon,22000
+2026-11-05,expense,Belanja,Pasar Kamis,57000
+2026-11-05,expense,Peliharaan,Pakan Entog,39000
+2026-11-05,expense,Kesehatan,berobat suami,39000
+2026-11-05,expense,Hiburan,Salon,50000
+2026-11-05,expense,Peliharaan,Pakan Entog,196000
+2026-11-05,expense,Makanan,Yuza beef noodle,88200
+2026-11-05,expense,Makanan,Sarapan,20000
+2026-11-05,expense,Tabungan,Tabungan,783902
+2026-11-05,expense,Transport,Oli,66500
+2026-11-04,expense,Lainnya,hadiah wisuda gege,200000
+2026-11-04,expense,Makanan,Sarapan,20000
+2026-11-04,expense,Hiburan,subscribe persib,200000
+2026-11-04,expense,Makanan,makan siang + gege,89300
+2026-11-03,expense,Peliharaan,Pakan Entog,30000
+2026-11-03,expense,Makanan,jajan rumah sakit,36000
+2026-11-03,expense,Kesehatan,bpjs istri,37500
+2026-11-03,expense,Transport,bensin suami,40000
+2026-11-03,expense,Makanan,Sarapan,10000
+2026-11-02,expense,Makanan,Beras,104000
+2026-11-02,expense,Belanja,Pasar Senin,100000
+2026-11-02,expense,Tabungan,Tabungan,1000000
+2026-11-01,expense,Tagihan,Kuota,55000
+2026-11-01,income,Gaji,Gaji October,8500000
+2026-11-01,expense,Makanan,teh hanaang,14000
+2026-11-01,expense,Lainnya,sambungan kabel LAN,21077
+2026-11-01,expense,Makanan,masak mudik,33000
+2026-11-01,expense,Makanan,mudik tianlala,77000
+2026-11-01,expense,Makanan,indomaret - kopi amanda roti,137500
+2026-11-01,expense,Makanan,Sarapan,17000
+2026-10-31,expense,Makanan,Ayam,45000
+2026-10-31,expense,Makanan,Sarapan,55000
+2026-10-31,expense,Hiburan,netflix,58000
+2026-10-30,expense,Tabungan,Investasi Reksadana,1250000
+2026-10-30,expense,Lainnya,Laundry Bedcover,40000
+2026-10-30,expense,Makanan,Mangga sarapan jajan rumah sakit sayuran mixue geprek soto,173000
+2026-10-30,expense,Makanan,Sarapan,10000
+2026-10-30,expense,Tabungan,Tabungan,1500000
+2026-10-30,expense,Makanan,Makan Siang,25000
+2026-10-30,expense,Hiburan,Spa,90000
+2026-10-30,expense,Makanan,mixue,18000
+2026-10-29,expense,Makanan,Makan Siang,17000
+2026-10-28,expense,Tabungan,Tabungan,500000
+2026-10-27,expense,Tabungan,Tabungan,2000000
+2026-10-27,expense,Makanan,Jus,12000
+2026-10-26,expense,Makanan,Makan Siang,16000
+2026-10-26,expense,Transport,bensin suami,30000
+2026-10-26,expense,Makanan,Makan Siang,16000
+2026-10-26,expense,Makanan,galon sayur batagor yang ga ketulis,250000
+2026-10-26,expense,Makanan,Sarapan,30000
+2026-10-26,income,Freelance,gaji oktober,3500000
+2026-10-26,expense,Lainnya,nambal abah,1046544
+2026-10-26,expense,Makanan,Sarapan,10000
+2026-10-26,expense,Peliharaan,Pakan Entog,70000
+2026-10-26,expense,Belanja,borma,449600
+2026-10-25,expense,Makanan,shopee food - momoyo,44400
+2026-10-25,expense,Tagihan,listrik,100000
+2026-10-25,expense,Makanan,ayam,20000
+2026-10-25,expense,Makanan,batagor,26900
+2026-10-25,expense,Makanan,Sarapan,28000
+2026-10-25,expense,Tagihan,Kuota XL,43380
+2026-10-24,expense,Makanan,cumi ebi dll,23500
+2026-10-24,expense,Kesehatan,berobat suami,35792
+2026-10-24,expense,Makanan,jajan rumah sakit,28000
+2026-10-23,expense,Makanan,batagor,16000
+2026-10-23,expense,Kesehatan,berobat suami,35000
+2026-10-23,expense,Makanan,jajan rumah sakit,22900
+2026-10-22,expense,Belanja,Pasar Kamis,101000
+2026-10-22,expense,Makanan,Sarapan,10000
+2026-10-22,expense,Hiburan,Cukur,18000
+2026-10-21,expense,Transport,bensin suami,40000
+2026-10-21,expense,Makanan,Makan Siang,21000
+2026-10-20,expense,Makanan,Makan Siang - kaybun,129500
+2026-10-20,expense,Tabungan,Tabungan,499597
+2026-10-20,expense,Peliharaan,Pakan Entog,115000
+2026-10-19,expense,Makanan,Makan Siang,22000
+2026-10-19,expense,Belanja,susu roti pembalut,79200
+2026-10-19,expense,Makanan,Jus,12000
+2026-10-18,expense,Makanan,Makan Siang,25000
+2026-10-18,expense,Peliharaan,Pakan Entog,65000
+2026-10-18,expense,Makanan,shopee food - soto,63500
+2026-10-17,expense,Makanan,sate,120000
+2026-10-17,expense,Kesehatan,haid,19500
+2026-10-17,expense,Transport,bensin suami,50000
+2026-10-17,expense,Makanan,kopi,22900
+2026-10-16,expense,Makanan,beras roti dll,162300
+2026-10-16,expense,Makanan,Makan Siang,23000
+2026-10-16,expense,Peliharaan,Pakan Entog,200000
+2026-10-16,expense,Makanan,Sarapan suami,10000
+2026-10-16,expense,Peliharaan,Bohlam Entog,37910
+2026-10-16,expense,Kesehatan,obat bapak,40000
+2026-10-16,expense,Makanan,jajan rumah sakit,3700
+2026-10-15,expense,Tagihan,Wifi,260000
+2026-10-15,income,Freelance,Gaji September,1250000
+2026-10-15,expense,Belanja,Pasar Kamis,89000
+2026-10-14,expense,Transport,bensin suami,52000
+2026-10-14,expense,Makanan,tomyum,42800
+2026-10-14,expense,Makanan,karedok dan mie kocok,25000
+2026-10-14,expense,Transport,bensin istri,47000
+2026-10-14,expense,Transport,stnk,260000
+2026-10-13,expense,Belanja,tahu pindang sayur asem,18000
+2026-10-13,expense,Kesehatan,berobat suami,95000
+2026-10-13,expense,Makanan,Sarapan (gorengan dan ayam),25000
+2026-10-13,expense,Makanan,batagor,10000
+2026-10-13,expense,Belanja,baygon roti keju telur dll,150500
+2026-10-12,expense,Belanja,Pasar Senin,131000
+2026-10-12,expense,Makanan,batagor dan jus,20000
+2026-10-12,expense,Makanan,Sarapan,10000
+2026-10-11,expense,Makanan,yuza beef noodle,72450
+2026-10-11,expense,Peliharaan,Pakan Entog,65000
+2026-10-11,expense,Makanan,Lazatto,56500
+2026-10-11,expense,Kesehatan,obat bapak,52409
+2026-10-11,expense,Makanan,Sarapan,10000
+2026-10-11,expense,Kesehatan,Padel,35000
+2026-10-10,expense,Makanan,Sarapan,25000
+2026-10-10,expense,Kesehatan,Olahraga,65000
+2026-10-10,expense,Makanan,Sarapan,25000
+2026-10-10,expense,Belanja,stevia,27130
+2026-10-10,expense,Makanan,soto bapak,30484
+2026-10-10,expense,Belanja,jas hujan payung plastik sampah teko dll,357266
+2026-10-10,expense,Makanan,seblak,41500
+2026-10-09,expense,Hiburan,Game,60000
+2026-10-09,expense,Makanan,Sarapan,5000
+2026-10-09,expense,Kesehatan,obat bapak,22000
+2026-10-09,expense,Belanja,bumbu opor galon sop dll,77000
+2026-10-09,expense,Makanan,Makan Siang,21000
+2026-10-08,expense,Belanja,Pasar Kamis,115000
+2026-10-08,expense,Makanan,Sarapan,10000
+2026-10-07,expense,Transport,bensin suami,60000
+2026-10-07,expense,Hiburan,Subscribe Capcut,75000
+2026-10-07,expense,Belanja,Beras 5 Kg,101900
+2026-10-07,expense,Makanan,Makan Malam - Sate,74520
+2026-10-07,expense,Belanja,lemon,12000
+2026-10-06,expense,Makanan,Ayam dan Tempe,16000
+2026-10-06,expense,Makanan,Jajan Istri - Tianlala,32000
+2026-10-06,expense,Tagihan,Kuota,935000
+2026-10-05,expense,Makanan,Sarapan,5000
+2026-10-05,expense,Kesehatan,bpjs istri,37500
+2026-10-05,expense,Makanan,Makan Siang,13000
+2026-10-05,expense,Makanan,Coffee,20000
+2026-10-05,expense,Belanja,filter air,14073
+2026-10-04,expense,Makanan,Sarapan,24000
+2026-10-04,expense,Keluarga,Keluarga,850000
+2026-10-04,expense,Makanan,baso,86000
+2026-10-03,expense,Makanan,bumbu rendang,9000
+2026-10-03,expense,Belanja,superindo - daging dll,155830
+2026-10-03,expense,Transport,bensin suami,32000
+2026-10-03,expense,Makanan,point coffee,25500
+2026-10-02,expense,Makanan,Makan Siang,17000
+2026-10-02,expense,Belanja,tissue dll,39500
+2026-10-02,expense,Kesehatan,obat bapak,48000
+2026-10-02,expense,Makanan,daging slice,43500
+2026-10-02,expense,Belanja,borma - belanja bulanan,382500
+2026-10-01,income,Gaji,Gaji September,8700000
+2026-10-01,expense,Makanan,kacang dan sosis,17400
+2026-10-01,expense,Makanan,yogurt,30000
+2026-10-01,expense,Lainnya,Sumbangan (Ada Ortu yg meninggal),15000
+2026-10-01,expense,Makanan,Makan Siang,15000
+2026-10-01,expense,Makanan,Jus Buah,12000
+2026-10-01,income,Freelance,Gaji September,3500000
+2026-10-01,expense,Makanan,Sarapan,5000
+2026-10-01,expense,Makanan,Jajan Istri - Yogurt,30000
+2026-10-01,expense,Makanan,Jajan Istri,17400
+2026-10-01,expense,Belanja,Pasar Kamis,242000
+2026-10-01,expense,Tabungan,Tabungan Maybank,500000
+2026-10-01,expense,Transport,service motor,140000
+2026-10-01,expense,Makanan,Sarapan,5000
+2026-10-01,expense,Tagihan,Kuota,50000
+2026-10-01,expense,Makanan,Bubur,13000
+2026-09-30,expense,Kesehatan,IGD Bapak,298940
+2026-09-30,expense,Makanan,Sarapan,8000
+2026-09-30,expense,Makanan,Yuza Beef Noodle - Korea,153300
+2026-09-30,expense,Peliharaan,Pakan Entog,247500
+2026-09-30,expense,Transport,bensin suami,40000
+2026-09-30,income,Investasi,Teteh Leles :),1000000
+2026-09-30,expense,Kesehatan,subscribe - apple fitness 1 bulan,70000
+2026-09-30,expense,Belanja,terong tahu kangkung,100000
+2026-09-29,expense,Kesehatan,padel,101475
+2026-09-29,expense,Makanan,batagor - jajan suami,8000
+2026-09-29,expense,Makanan,jus mangga,8000
+2026-09-28,expense,Keluarga,Keluarga,100000
+2026-09-28,expense,Kesehatan,obat bapak,31000
