@@ -20,6 +20,12 @@ export interface QuickAddInput {
   debtOperation?: DebtOperation;
 }
 
+export type DebtDirection = "out" | "in";
+
+export interface SavingWithCategory extends Saving {
+  category: string;
+}
+
 export function normalizeTransactionCategory(transaction: Transaction): Transaction {
   if (transaction.type !== "expense" || transaction.category.trim().toLocaleLowerCase("id-ID") !== "lainnya") {
     return transaction;
@@ -43,6 +49,7 @@ export interface Saving {
   amount: number;
   description: string;
   date: string;
+  category?: string;
   created_at?: string;
 }
 
@@ -71,6 +78,68 @@ export function getExpenseGroup(category: string): ExpenseGroup {
   if (normalized === "tabungan") return "Tabungan";
   if (normalized === "lainnya") return "Lainnya";
   return "Kebutuhan";
+}
+
+export const EXPENSE_GROUP_ORDER: ExpenseGroup[] = ["Kebutuhan", "Keinginan", "Tabungan", "Lainnya"];
+
+export const EXPENSE_GROUP_COLORS: Record<ExpenseGroup, string> = {
+  Kebutuhan: "#0ea5e9",
+  Keinginan: "#ec4899",
+  Tabungan: "#f59e0b",
+  Lainnya: "#6b7280",
+};
+
+export interface MonthlyCategoryBreakdown {
+  monthKey: string;
+  monthLabel: string;
+  income: number;
+  expense: number;
+  groups: Record<ExpenseGroup, { total: number; categories: { category: string; amount: number; count: number }[] }>;
+}
+
+export function getMonthlyCategoryBreakdown(transactions: Transaction[]): MonthlyCategoryBreakdown[] {
+  const months = new Map<string, Map<string, { amount: number; count: number }>>();
+  const incomeByMonth = new Map<string, number>();
+
+  transactions.forEach((transaction) => {
+    const key = monthKey(transaction.date);
+    if (transaction.type === "income") {
+      incomeByMonth.set(key, (incomeByMonth.get(key) || 0) + transaction.amount);
+      return;
+    }
+    const categories = months.get(key) || new Map<string, { amount: number; count: number }>();
+    const existing = categories.get(transaction.category) || { amount: 0, count: 0 };
+    existing.amount += transaction.amount;
+    existing.count += 1;
+    categories.set(transaction.category, existing);
+    months.set(key, categories);
+  });
+
+  return Array.from(new Set([...incomeByMonth.keys(), ...months.keys()]))
+    .sort((a, b) => b.localeCompare(a))
+    .map((key) => {
+      const categories = months.get(key) || new Map<string, { amount: number; count: number }>();
+      const groups = {} as MonthlyCategoryBreakdown["groups"];
+      EXPENSE_GROUP_ORDER.forEach((group) => {
+        groups[group] = { total: 0, categories: [] };
+      });
+      let expense = 0;
+      Array.from(categories.entries())
+        .sort((a, b) => b[1].amount - a[1].amount)
+        .forEach(([category, value]) => {
+          const group = getExpenseGroup(category);
+          groups[group].total += value.amount;
+          groups[group].categories.push({ category, amount: value.amount, count: value.count });
+          expense += value.amount;
+        });
+      return {
+        monthKey: key,
+        monthLabel: monthLabel(`${key}-01`),
+        income: incomeByMonth.get(key) || 0,
+        expense,
+        groups,
+      };
+    });
 }
 
 export function getMonthlyCashflowAverage(
@@ -152,6 +221,68 @@ export function dailySpendingRate(transactions: Transaction[]): { daily: number;
   return { daily, monthly: daily * 30 };
 }
 
+export interface IncomeDropScenario {
+  incomeDropPct: number;
+  expenseCuts: { group: ExpenseGroup; original: number; reduced: number }[];
+  newMonthlyExpense: number;
+  originalMonthlyExpense: number;
+  monthlyDeficit: number;
+  coveredBySavingsMonths: number;
+  survivalMonths: number;
+}
+
+// "Best case": expenses shrink with income, cutting discretionary spending first
+// (Lainnya -> Keinginan -> Kebutuhan) while savings transfers drop to zero.
+export function buildIncomeDropScenarios(transactions: Transaction[]): IncomeDropScenario[] {
+  const average = getMonthlyCashflowAverage(transactions);
+  if (average.months === 0) return [];
+
+  const savingsGroup = average.categories
+    .filter(({ category }) => category.trim().toLocaleLowerCase("id-ID") === "tabungan")
+    .reduce((sum, item) => sum + item.amount, 0);
+  const otherGroups: ExpenseGroup[] = ["Lainnya", "Keinginan", "Kebutuhan"];
+  const groupTotals = new Map<ExpenseGroup, number>();
+  otherGroups.forEach((group) => {
+    groupTotals.set(
+      group,
+      average.categories
+        .filter(({ category }) => getExpenseGroup(category) === group)
+        .reduce((sum, item) => sum + item.amount, 0),
+    );
+  });
+
+  return [10, 25, 50, 75, 100].map((incomeDropPct) => {
+    let deficit = (average.income * incomeDropPct) / 100;
+    deficit -= Math.min(savingsGroup, deficit);
+
+    const expenseCuts = otherGroups.map((group) => ({
+      group,
+      original: groupTotals.get(group) || 0,
+      reduced: groupTotals.get(group) || 0,
+    }));
+    expenseCuts.forEach((cut) => {
+      if (deficit <= 0) return;
+      const reduction = Math.min(cut.original, deficit);
+      cut.reduced = cut.original - reduction;
+      deficit -= reduction;
+    });
+
+    const newMonthlyExpense = expenseCuts.reduce((sum, cut) => sum + cut.reduced, 0);
+    const originalMonthlyExpense = expenseCuts.reduce((sum, cut) => sum + cut.original, 0);
+    const monthlyDeficit = Math.max(0, newMonthlyExpense - (average.income * (100 - incomeDropPct)) / 100);
+
+    return {
+      incomeDropPct,
+      expenseCuts,
+      newMonthlyExpense,
+      originalMonthlyExpense,
+      monthlyDeficit,
+      coveredBySavingsMonths: savingsGroup,
+      survivalMonths: monthlyDeficit,
+    };
+  });
+}
+
 export function monthKey(date: Date | string): string {
   const d = new Date(date);
   return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}`;
@@ -176,6 +307,17 @@ export function getRunningBalance(transactions: Transaction[]): { date: string; 
   return sorted.map((t) => {
     running += t.type === "income" ? t.amount : -t.amount;
     return { date: t.date, balance: running };
+  });
+}
+
+export function getSavingsBalanceOverTime(savings: Saving[]): { date: string; balance: number }[] {
+  const sorted = [...savings]
+    .filter((entry) => entry.amount !== 0)
+    .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
+  let running = 0;
+  return sorted.map((entry) => {
+    running += entry.amount;
+    return { date: entry.date, balance: running, description: entry.description };
   });
 }
 
